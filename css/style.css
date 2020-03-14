@@ -72,7 +72,7 @@ html {
 }
 @keyframes glow {
   to {
-    text-shadow: 0 0 10px rgb(255, 253, 108);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
   }
 }
 #timer {
