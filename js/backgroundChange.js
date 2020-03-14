@@ -2,18 +2,21 @@ export function setBgGreet() {
   const today = new Date(),
     hour = today.getHours();
 
-  if (hour < 12) {
-    // Morning
+  // todo: change the condition to be with other pattern, like:
+  const timeConditions = {
+    morning: hour < 12,
+    afternoon: hour < 18 && hour >= 12,
+    night: hour > 18
+  };
 
-    document.getElementById('header').style.backgroundImage =
-      "url('../img/morning.jpg')";
-  } else if (hour < 18) {
-    // Afternoon
-    document.getElementById('header').style.backgroundImage =
-      "url('../img/night.jpg')";
-  } else {
-    // Evening
-    document.getElementById('header').style.backgroundImage =
-      "url('../img/night.jpg')";
+  for (const currentTime in timeConditions) {
+    if (timeConditions[currentTime]) {
+      styleByTime(currentTime);
+    }
+  }
+  function styleByTime(currentTime) {
+    document.getElementById(
+      'header'
+    ).style.backgroundImage = `url('../img/${currentTime}.jpg')`;
   }
 }
