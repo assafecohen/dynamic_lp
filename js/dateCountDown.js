@@ -1,10 +1,11 @@
+import { countDownDate } from '../config.js';
 export function updateTimer() {
-  const countDownDate = new Date('march 31, 2020 23:59:59').getTime();
+  const timer = new Date(countDownDate).getTime();
 
   let x = setInterval(function() {
     let now = new Date().getTime();
 
-    let distance = countDownDate - now;
+    let distance = timer - now;
 
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
     let hours = Math.floor(
