@@ -9,12 +9,16 @@ html {
 .card {
   margin-bottom: 15px;
 }
+.logo.fa {
+  color: #be2835;
+  font-size: 30px;
+}
+.logo.fa span {
+  color: #dfdfdf;
+}
 @media (max-width: 760px) {
   #header {
     text-align: center;
-  }
-  #header img {
-    margin: 0 auto;
   }
 }
 /* navbar */
@@ -51,10 +55,6 @@ html {
   backdrop-filter: blur(4px);
 }
 
-#header img {
-  padding-bottom: 20px;
-  width: 80%;
-}
 #header .fas {
   margin: 5% 0;
   color: #fff;
